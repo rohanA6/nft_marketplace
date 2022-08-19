@@ -1,9 +1,9 @@
 import { Center, Heading } from "@chakra-ui/react";
 
-export default function Home() {
+export default function NftdashBoard() {
   return (
     <Center>
-    <Heading>Home Page</Heading>
+    <Heading>Dashboard</Heading>
     </Center>
   )
 }

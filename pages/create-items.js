@@ -1,9 +1,9 @@
 import { Center, Heading } from "@chakra-ui/react";
 
-export default function Home() {
+export default function createItems() {
   return (
     <Center>
-    <Heading>Home Page</Heading>
+    <Heading>make Nfts</Heading>
     </Center>
   )
 }
