@@ -6,44 +6,100 @@ import {
   Button,
   Grid,
   Center,
+  Box,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
+// ChakraUI
+import { extendTheme } from "@chakra-ui/react"
+import "@fontsource/silkscreen"
+
+const theme = extendTheme({
+  fonts: {
+    heading: 'Silkscreen',
+  },
+});
 
 const Navbar = () => {
   return (
-    <nav>
-      <Center>
-        <Grid>
-
-          <Center><Heading mt={10} mb={5} fontSize="6xl">Formula verse</Heading></Center>
+    <div>
+      <nav>
+        <Center bg="red.400" m={50} mb={10} mt={7} border="2px" p={3} borderRadius="50px">
+          <Heading ml={5} fontSize="2.6rem">
+            Formula verse
+          </Heading>
 
           <Spacer />
 
-          <Flex mb={10}>
-
+          <Flex>
             <ButtonGroup>
               <Link href="/">
-                <Button>Home</Button>
+                <Button
+                  colorScheme="red"
+                  bg="black"
+                  color="white"
+                  boxShadow="lg"
+                  borderRadius="50px"
+                  size="md"
+                  m={2}
+                >
+                  Home
+                </Button>
               </Link>
               <Spacer />
+
               <Link href="/create-items">
-                <Button>Sale NFT</Button>
+                <Button
+                  colorScheme="red"
+                  bg="black"
+                  color="white"
+                  boxShadow="lg"
+                  borderRadius="50px"
+                  size="md"
+                  m={2}
+                >
+                  Sale NFT
+                </Button>
               </Link>
               <Spacer />
+
               <Link href="/My-items">
-                <Button>My NFT</Button>
+                <Button
+                  colorScheme="red"
+                  bg="black"
+                  color="white"
+                  boxShadow="lg"
+                  borderRadius="50px"
+                  size="md"
+                  m={2}
+                >
+                  My Collaction
+                </Button>
               </Link>
               <Spacer />
+
               <Link href="/Nft-dashboard">
-                <Button>NFT Dashboard</Button>
+                <Button
+                  colorScheme="red"
+                  bg="black"
+                  color="white"
+                  boxShadow="lg"
+                  borderRadius="50px"
+                  size="md"
+                  m={2}
+                >
+                  NFT Dashboard
+                </Button>
               </Link>
             </ButtonGroup>
-
           </Flex>
-
-        </Grid>
-      </Center>
-    </nav>
+          <Box ml='30px'>
+            <ConnectButton />
+          </Box>
+        </Center>
+      </nav>
+    </div>
   );
 };
 

@@ -12,7 +12,7 @@ const POLYGON_RPC_URL = process.env.POLYGON_RPC_URL;
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
-    mumbai: {
+    polygonMumbai: {
       url: MUMBAI_RPC_URL,
       accounts: [PRIVATE_KEY],
       chainId: 80001,
